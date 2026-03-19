@@ -33,14 +33,6 @@ This project demonstrates the conversion of 5 legacy Windows applications into m
 5. Code Signing  
 6. Testing & Validation  
 7. Deployment  
-
----
-
-## 📸 Project Screenshots
-(Add your images after uploading)
-
-![Collage](images/collage.png)
-
 ---
 
 ## 🚀 Key Features
@@ -57,18 +49,30 @@ This project demonstrates the conversion of 5 legacy Windows applications into m
 - Complex apps may need PSF  
 
 ---
-
 ## 📂 Project Files
 - 📊 PPT: Project Presentation  
 - 📄 DOC: Detailed Documentation  
 - 🖼️ Screenshots  
-
 ---
-
 ## 📌 Conclusion
 MSIX provides a modern, secure, and efficient way to deploy and manage applications in enterprise environments.
 
----
 
-## 🔗 Author
+## 💻 PowerShell Deployment
+
+Below is a sample PowerShell command used to install MSIX packages:
+
+```powershell
+Add-AppxPackage -Path "C:\Packaging\Output\YourApp.msix"
+$apps = @(
+    "C:\Packaging\Output\7zip.msix",
+    "C:\Packaging\Output\WinSCP.msix",
+    "C:\Packaging\Output\GIMP.msix"
+)
+
+foreach ($app in $apps) {
+    Add-AppxPackage -Path $app
+}
+
+ 🔗 Author
 **Anshika Kumari**
